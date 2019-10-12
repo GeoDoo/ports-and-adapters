@@ -4,18 +4,16 @@ const withLoader = (WrappedComponent) => {
     return class WithLoader extends React.Component {
         state = {
             isLoading: true,
-            data: {},
+            data: []
         };
 
         async componentDidMount() {
             const { callback } = this.props;
 
             try {
-                const data = await callback();
-                
-                setTimeout(() => {
-                    this.setState({ isLoading: false, data });
-                }, 1000);
+                const { data } = await callback();
+
+                this.setState({ isLoading: false, data });
             } catch (e) {
                 throw e;
             }
@@ -24,7 +22,7 @@ const withLoader = (WrappedComponent) => {
         render() {
             const { isLoading, data } = this.state;
 
-            return isLoading ? <div>Loading...</div> : <WrappedComponent {...this.props} data={data} />;
+            return isLoading ? <div>Loading...</div> : <WrappedComponent data={data} />;
         }
     }
 }

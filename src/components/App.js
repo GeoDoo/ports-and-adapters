@@ -1,16 +1,11 @@
 import React from 'react';
+import adapter from '../adapters';
 import BlogPosts from './BlogPosts';
-
-const blogPosts = [{
-  title: 'We are the champions'
-},{
-  title: 'Johnson at the EU'
-}];
 
 class App extends React.Component {
   render() {
     return (
-      <BlogPosts callback={() => blogPosts} />
+      <BlogPosts callback={adapter.getBlogPosts} />
     );
   }
 }
