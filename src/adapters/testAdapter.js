@@ -1,10 +1,4 @@
-const blogPosts = [{
-    id: 1,
-    title: { rendered: 'We are the champions' }
-}, {
-    id: 2,
-    title: { rendered: 'Johnson at the EU' }
-}];
+import { blogPosts } from '../test-data/blogPosts.json';
 
 export default {
     getBlogPosts: () => ({ data: blogPosts })
