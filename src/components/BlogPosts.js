@@ -1,6 +1,6 @@
 import React from 'react';
 import withLoader from 'hocs/withLoader';
-import { emptyListOfBlogPosts } from 'messages/empty.json';
+import { emptyListOfBlogPostsMessage } from 'messages/empty.json';
 
 export const BlogPosts = ({ data }) => {
     return (
@@ -12,7 +12,7 @@ export const BlogPosts = ({ data }) => {
                         {data.map(({ id, title: { rendered } }) => <li key={id}>{rendered}</li>)}
                     </ul>
                     :
-                    <p>{emptyListOfBlogPosts}</p>
+                    <p>{emptyListOfBlogPostsMessage}</p>
             }
         </div>
     )
