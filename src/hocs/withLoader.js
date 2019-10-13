@@ -14,7 +14,6 @@ const withLoader = (WrappedComponent) => {
 
             this.isAlreadyMounted = true;
 
-
             try {
                 const { data } = await callback();
 

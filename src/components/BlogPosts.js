@@ -7,10 +7,12 @@ export const BlogPosts = ({ data }) => {
         <div data-testid="blog-posts">
             {
                 data.length
-                    ? <ul >
+                    ?
+                    <ul >
                         {data.map(({ id, title: { rendered } }) => <li key={id}>{rendered}</li>)}
                     </ul>
-                    : <p>{emptyListOfBlogPosts}</p>
+                    :
+                    <p>{emptyListOfBlogPosts}</p>
             }
         </div>
     )

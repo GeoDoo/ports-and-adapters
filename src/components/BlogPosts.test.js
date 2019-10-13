@@ -9,7 +9,7 @@ test('loads and displays blog posts', () => {
     const { data } = adapter.getBlogPosts();
     const { getAllByText } = render(<BlogPosts data={data} />)
 
-    expect(getAllByText('the', { exact: false }).length).toBe(2);
+    expect(getAllByText('the', { exact: false })).toHaveLength(3);
 });
 
 test('shows message when there are no blog posts', () => {
