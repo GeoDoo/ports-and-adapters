@@ -1,6 +1,6 @@
 import React from 'react';
-import adapter from '../adapters';
-import BlogPosts from './BlogPosts';
+import adapter from 'adapters';
+import BlogPosts from 'components/BlogPosts';
 
 class App extends React.Component {
   render() {

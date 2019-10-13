@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import adapter from '../adapters';
-import { BlogPosts } from './BlogPosts'
+import adapter from 'adapters';
+import { BlogPosts } from 'components/BlogPosts'
 import { emptyListOfBlogPosts } from 'messages/empty.json';
 
 test('loads and displays blog posts', () => {

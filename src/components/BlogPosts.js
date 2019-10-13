@@ -1,5 +1,5 @@
 import React from 'react';
-import withLoader from '../hocs/withLoader';
+import withLoader from 'hocs/withLoader';
 import { emptyListOfBlogPosts } from 'messages/empty.json';
 
 export const BlogPosts = ({ data }) => {
