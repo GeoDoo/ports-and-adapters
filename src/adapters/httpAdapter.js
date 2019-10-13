@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseUrl = 'https://geodoo.work/wp-json/wp/v2';
+const baseApiUrl = 'https://geodoo.work/wp-json/wp/v2';
 
 export default {
-    getBlogPosts: () => axios.get(`${baseUrl}/posts`)
+    getBlogPosts: () => axios.get(`${baseApiUrl}/posts`)
 };
