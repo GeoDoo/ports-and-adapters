@@ -1,4 +1,4 @@
-This is a small experiment with Ports and Adapters architecture! 
+### This is a small experiment with Ports and Adapters architecture! 
 
 There are two different "modes" or users of the application. One is, for example a normal user that uses the application on production with real access to an API (production with `axios`) and the other, for example is a test user who uses a static application (locally with static data).
 
