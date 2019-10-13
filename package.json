@@ -5,6 +5,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "4.1.2",
     "@testing-library/react": "9.3.0",
+    "codeceptjs": "2.3.2",
+    "puppeteer": "1.20.0",
     "react-scripts": "3.2.0"
   },
   "dependencies": {
@@ -16,9 +18,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "production": "npm run build && serve -s build"
+    "build:production": "npm run build && serve -s build",
+    "test": "react-scripts test unit",
+    "test:acceptance": "npx codeceptjs run --steps",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
