@@ -1,5 +1,5 @@
 This is a small experiment with Ports and Adapters architecture! 
 
-To check the two different "modes" (production with `axios` and local with local data) try running `npm start` and `npm run production`. 
+There are two different "modes" or users of the application. One is, for example a normal user that uses the application on production with real access to an API (production with `axios`) and the other, for example is a test user who uses a static application (locally with static data).
 
-The first will open up in port 3000 and the second in port 5000. These ports of course are not the Ports from the architecture :D 
+Try running `npm start` and `npm run production`. The first will open up the app in port 3000 and the second in port 5000. These ports of course are not the Ports from the architecture :D 
