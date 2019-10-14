@@ -5,8 +5,8 @@ import adapter from 'adapters';
 import { BlogPosts } from 'components/BlogPosts'
 import { emptyListOfBlogPostsMessage } from 'messages/empty.json';
 
-test('loads and displays blog posts', () => {
-    const { data } = adapter.getBlogPosts();
+test('loads and displays blog posts', async () => {
+    const data = await adapter.getBlogPosts();
     const { getAllByText } = render(<BlogPosts data={data} />)
 
     expect(getAllByText('the', { exact: false })).toHaveLength(3);

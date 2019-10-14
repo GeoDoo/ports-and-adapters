@@ -3,14 +3,24 @@ import adapter from 'adapters';
 import BlogPosts from 'components/BlogPosts';
 
 class App extends React.Component {
+  isAlreadyMounted = false;
+
   state = {
     blogPosts: null,
   }
 
   async componentDidMount() {
+    this.isAlreadyMounted = true;
+
     const blogPosts = await adapter.getBlogPosts();
 
-    this.setState({ blogPosts });
+    if (this.isAlreadyMounted) {
+      this.setState({ blogPosts });
+    }
+  }
+
+  componentWillUnmount() {
+    this.isAlreadyMounted = false;
   }
 
   render() {
