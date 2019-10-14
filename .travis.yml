@@ -16,5 +16,5 @@ install:
   - npm install
 script:
   - npm test
-  - npm test:acceptance
+  - npm run test:acceptance
   - npm build
