@@ -1,5 +1,5 @@
 import { blogPosts } from '../test-data/blogPosts.json';
 
 export default {
-    getBlogPosts: () => ({ data: blogPosts })
+    getBlogPosts: () => blogPosts
 };
