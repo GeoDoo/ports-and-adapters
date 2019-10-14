@@ -9,7 +9,7 @@ export const BlogPosts = ({ data }) => {
                 data.length
                     ?
                     <ul>
-                        {data.map(({ id, title: { rendered } }) => <li key={id} className="blog-post">{rendered}</li>)}
+                        {data.map(({ id, title: { rendered } }) => <li key={id} data-testid="blog-post">{rendered}</li>)}
                     </ul>
                     :
                     <p>{emptyListOfBlogPostsMessage}</p>

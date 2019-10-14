@@ -7,9 +7,9 @@ import { emptyListOfBlogPostsMessage } from 'messages/empty.json';
 
 test('loads and displays blog posts', async () => {
     const data = await adapter.getBlogPosts();
-    const { getAllByText } = render(<BlogPosts data={data} />)
+    const { getAllByTestId } = render(<BlogPosts data={data} />)
 
-    expect(getAllByText('the', { exact: false })).toHaveLength(3);
+    expect(getAllByTestId('blog-post')).toHaveLength(10);
 });
 
 test('shows message when there are no blog posts', () => {
