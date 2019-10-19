@@ -1,4 +1,4 @@
-Feature: Blog
+Feature: Blog homepage
   As a user I want to read a nice blog
 
   Scenario: Check list of blog posts
